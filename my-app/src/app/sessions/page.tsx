@@ -5,6 +5,9 @@ import { Calendar, Clock, Video, MessageCircle, Brain, CheckCircle } from 'lucid
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Link from 'next/link';
+import contractAbi from "../contractInfo/contractAbi.json"
+import { BrowserProvider, ethers } from 'ethers';
+import contractAddress from "../contractInfo/contractAddress.json"
 
 interface Session {
   id: string;
@@ -26,7 +29,21 @@ export default function SessionsPage() {
     // Here you can add logic for handling the session join
     console.log('Joining session:', session);
     // Add API call or other logic here
+    deposit()
   };
+
+  const deposit = async ()=> {
+    const {abi} = contractAbi;
+    const charge = 1;
+    const provider = new BrowserProvider(window.ethereum);
+
+    const signer = await provider.getSigner();
+    const address = await signer.getAddress();
+    const bounceContract = new ethers.Contract(contractAddress.address, abi, signer)
+
+    await (await bounceContract.donate(address,"0x94A7Af5edB47c3B91d1B4Ffc2CA535d7aDA8CEDe", ethers.parseUnits(charge.toString(), 18))).wait();
+  
+  }
 
   const upcomingSessions: Session[] = [
     {
@@ -189,6 +206,7 @@ export default function SessionsPage() {
                       onClick={() => {
                         setSelectedSession(session);
                         setIsJoinModalOpen(true);
+                        // joinAndWithdraw();
                       }}
                       className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors"
                     >

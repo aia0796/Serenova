@@ -42,7 +42,7 @@ const Navbar = () => {
           className="bg-purple-600 text-white px-6 py-2 rounded-full hover:bg-purple-700 transition-colors" 
           onClick={isConnected ? undefined : connectWallet}
         >
-          {isConnected ? `${account?.substring(0, 6)}...${account?.substring(account?.length - 4)}` : "Connect MetaMask"}
+          {isConnected ? `${account?.substring(0, 6)}...${account?.substring(account?.length - 4)}` : "Connect Wallet"}
         </button>
 
         <Link 
