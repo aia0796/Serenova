@@ -1,8 +1,33 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+# Serenova (Built on AIA CHAIN)
+
+**Serenova**: Empowering mental health support by connecting you with professionals and peers via the Web3-powered HEAL token ecosystem.
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Mental Health Support](#mental-health-support)
+- [Web3 Ecosystem Integration](#web3-ecosystem-integration)
+- [HEAL Token](#heal-token)
+- [Getting Started](#getting-started)
+- [License](#license)
+
+## Introduction
+Serenova provides a safe, innovative space for mental health support, fostering genuine connections and utilizing the power of Web3.
+
+## Mental Health Support
+- Connect with professional consultants and empathetic peers to discuss your mental health and find comfort.
+
+## Web3 Ecosystem Integration
+- Leverage blockchain technology to ensure secure, transparent, and decentralized interactions within the community.
+
+## HEAL Token
+- Earn and use HEAL tokens within the platform for services, support, and community engagement, empowering users and professionals alike.
+
+
 ## Getting Started
 
-## Add HEAL contract address to your wallet 
+Add HEAL contract address to your wallet 
 
 CONTRACT ADDRESS = 0x910c9bA22B98eCf3fd8F22489A41185798FE56F6
 
