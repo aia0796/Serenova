@@ -1,6 +1,17 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-# Serenova (Built on AIA CHAIN)
+----
+
+## Add HEAL token contract address to wallet (BUILD ON MANTLE TESTNET CHAIN)
+
+Contract address : 0x74EA287ad62aFE82fcB3ab85650eE8Dd45C9180e
+
+[Verify HEAL on testnet](https://explorer.sepolia.mantle.xyz/token/0x74EA287ad62aFE82fcB3ab85650eE8Dd45C9180e)
+
+
+----
+
+# Serenova (Built on MANTLE CHAIN)
 
 **Serenova**: Empowering mental health support by connecting you with professionals and peers via the Web3-powered HEAL token ecosystem.
 
@@ -29,9 +40,9 @@ Serenova provides a safe, innovative space for mental health support, fostering 
 
 Add HEAL contract address to your wallet 
 
-CONTRACT ADDRESS = 0x910c9bA22B98eCf3fd8F22489A41185798FE56F6
+CONTRACT ADDRESS = 0x74EA287ad62aFE82fcB3ab85650eE8Dd45C9180e
 
-[Verify HEAL](https://testnet.aiascan.com/token/0x910c9bA22B98eCf3fd8F22489A41185798FE56F6)
+[Verify HEAL](https://testnet.MANTLEscan.com/token/0x74EA287ad62aFE82fcB3ab85650eE8Dd45C9180e)
 
 First, run the development server:
 

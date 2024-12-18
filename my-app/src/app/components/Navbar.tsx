@@ -22,6 +22,8 @@ const Navbar = () => {
   const withdraw = async () => {
       const {abi} = contractAbi;
       const charge = 10;
+      if(window.ethereum == undefined) 
+        return
       const provider = new BrowserProvider(window.ethereum);
   
       const signer = await provider.getSigner();
