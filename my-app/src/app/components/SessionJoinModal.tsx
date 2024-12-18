@@ -28,7 +28,7 @@ const SessionJoinModal: React.FC<SessionJoinModalProps> = ({ session, isOpen, se
     <div className="fixed inset-0 z-50 bg-black bg-opacity-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg w-full max-w-md relative">
         {/* Close button */}
-        <button 
+        <button
           onClick={() => setIsOpen(false)}
           className="absolute right-4 top-4 text-gray-500 hover:text-gray-700"
         >
@@ -41,18 +41,21 @@ const SessionJoinModal: React.FC<SessionJoinModalProps> = ({ session, isOpen, se
             Join Session with {session?.therapist}
           </h2>
         </div>
-        
+
         {/* Content */}
         <div className="p-6 space-y-4">
           <p className="text-sm text-gray-600">
             You are about to join a {session?.type} session scheduled for{' '}
-            {new Date(session?.date).toLocaleDateString('en-US', {
-              month: 'short',
-              day: 'numeric',
-              year: 'numeric'
-            })} at {session?.time}.
+            {session?.date
+              ? new Date(session.date).toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+              })
+              : 'an unknown date'}{' '}
+            at {session?.time || 'an unknown time'}.
           </p>
-          
+
           <p className="text-sm text-gray-600">
             Duration: {session?.duration}
           </p>
@@ -76,8 +79,12 @@ const SessionJoinModal: React.FC<SessionJoinModalProps> = ({ session, isOpen, se
           </button>
           <button
             onClick={() => {
-              onJoin(session);
-              setIsOpen(false);
+              if (session) {
+                onJoin(session); // Ensure `onJoin` gets called only when `session` exists
+              } else {
+                console.error('Session is undefined or invalid');
+              }
+              setIsOpen(false); // Safely close the modal or toggle state
             }}
             className="px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors"
           >
